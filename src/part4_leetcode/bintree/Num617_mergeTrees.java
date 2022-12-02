@@ -1,4 +1,4 @@
-package leetcode;
+package part4_leetcode.bintree;
 
 
 public class Num617_mergeTrees {

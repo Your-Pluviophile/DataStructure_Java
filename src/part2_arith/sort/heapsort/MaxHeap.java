@@ -1,4 +1,4 @@
-package binTree.sort.heapsort;
+package part2_arith.sort.heapsort;
 
 import java.util.ArrayList;
 import java.util.List;

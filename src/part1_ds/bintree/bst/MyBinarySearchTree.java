@@ -115,4 +115,53 @@ public class MyBinarySearchTree {
         return root;
     }
 
+    //任意位置删除
+    public void remove(int val) {
+        if (size == 0) {
+            throw new NoSuchElementException("bst is empty!cannot remove!");
+        }
+        root = remove(root,val);
+    }
+
+    private TreeNode remove(TreeNode root, int val) {
+        if(root == null){
+            //val节点不存在
+            throw new NoSuchElementException("bst has not this val");
+        }else if(val < root.val){
+            remove(root.left,val);
+            return root;
+        }else if(val > root.val){
+            remove(root.right,val);
+            return root;
+
+        }else{
+            // 此时val == root.val
+            // 当前树根就是待删除的节点！
+            if (root.left == null) {
+                // 待删除节点左子树为空，类似删除最大值
+                TreeNode right = root.right;
+                root.right = root = null;
+                size --;
+                return right;
+            }else if (root.right == null) {
+                // 待删除节点的右子树为空，类似删除最小值
+                TreeNode left = root.left;
+                root.left = root = null;
+                size --;
+                return left;
+            }
+            // 此时待删除节点的左右子树都不为空
+            // 找到后继节点，恰好是右子树的最小值
+            TreeNode successor = findMinNode(root.right);
+            // 1.先在右子树中删除后继节点，连接到后继节点的右子树
+            successor.right = removeMin(root.right);
+            // 2.拼接原来的左子树
+            successor.left = root.left;
+            // 断掉root
+            root.left = root.right = root = null;
+            return successor;
+        }
+    }
 }
+
+

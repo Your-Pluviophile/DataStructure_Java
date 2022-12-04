@@ -1,9 +1,6 @@
 package part4_leetcode.queue;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.PriorityQueue;
-import java.util.Set;
+import java.util.*;
 
 public class Num347_topKFrequent {
     public int[] topKFrequent(int[] nums, int k) {
@@ -15,6 +12,7 @@ public class Num347_topKFrequent {
         }
         //小顶堆保存
         Set<Map.Entry<Integer, Integer>> entries = map.entrySet();
+        
         PriorityQueue<Map.Entry<Integer, Integer>> queue = new PriorityQueue<>((o1, o2) -> o1.getValue() - o2.getValue());
         for (Map.Entry<Integer, Integer> entry : entries) {
             queue.offer(entry);

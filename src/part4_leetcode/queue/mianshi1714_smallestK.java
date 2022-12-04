@@ -6,6 +6,7 @@ import java.util.Queue;
 
 public class mianshi1714_smallestK {
     public int[] smallestK(int[] arr, int k) {
+
         int[] res = new int[k];
         Queue<Integer> queue = new PriorityQueue<>((o1, o2) -> o2 - o1);
         for (int i : arr) {

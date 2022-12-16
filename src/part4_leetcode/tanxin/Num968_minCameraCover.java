@@ -3,7 +3,7 @@ package part4_leetcode.tanxin;
 import part4_leetcode.bintree.TreeNode;
 
 public class Num968_minCameraCover {
-    int res = 0;
+    int res = 0;//5  011
 
     public int minCameraCover(TreeNode root) {
 

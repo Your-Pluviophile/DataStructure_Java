@@ -9,7 +9,7 @@ public class Num35_searchInsert {
         if (target > nums[nums.length - 1]) return nums.length - 1;
 
         int l = 0;
-        int r = nums.length;
+        int r = nums.length - 1;
 
         while (r >= l) {
             int mid = l + ((r - l) >> 1);

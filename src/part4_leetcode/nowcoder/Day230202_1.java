@@ -2,7 +2,6 @@ package part4_leetcode.nowcoder;
 
 import java.util.Scanner;
 
-import static part4_leetcode.backtracing.Day221222_2.process;
 
 public class Day230202_1 {
     /*

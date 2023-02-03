@@ -1,21 +1,6 @@
 package part4_leetcode.linkedlist;
 
-class ListNode {
-    int val;
-    ListNode next;
 
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
 
 public class Num19_removeNthFromEnd {
     public ListNode removeNthFromEnd(ListNode head, int n) {

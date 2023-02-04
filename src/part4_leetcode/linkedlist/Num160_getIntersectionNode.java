@@ -1,6 +1,6 @@
 package part4_leetcode.linkedlist;
 
-public class Num60_getIntersectionNode {
+public class Num160_getIntersectionNode {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         ListNode curA = headA;
         ListNode curB = headB;

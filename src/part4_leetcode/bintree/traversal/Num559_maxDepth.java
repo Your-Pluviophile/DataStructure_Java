@@ -17,4 +17,21 @@ public class Num559_maxDepth {
         return depth + 1;//处理当前节点
 
     }
+
+    static class Node {
+        public int val;
+        public List<part4_leetcode.bintree.traversal.Node> children;
+
+        public Node() {
+        }
+
+        public Node(int _val) {
+            val = _val;
+        }
+
+        public Node(int _val, List<part4_leetcode.bintree.traversal.Node> _children) {
+            val = _val;
+            children = _children;
+        }
+    }
 }

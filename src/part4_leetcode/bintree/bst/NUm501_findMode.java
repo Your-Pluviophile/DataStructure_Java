@@ -13,9 +13,10 @@ public class NUm501_findMode {
     public int[] findMode(TreeNode root) {
         count = 0;
         maxCount = 0;
-        result = new ArrayList();
-        int[] res = new int[result.size()];
+        result = new ArrayList<>();
         process(root);
+        int[] res = new int[result.size()];
+
         for(int i = 0; i < result.size();i++){
             res[i] = result.get(i);
         }

@@ -12,10 +12,13 @@ public class Num450_deleteNode {
                 return root.left;
             } else {
                 TreeNode cur = root.right;
+                //找到右子树的最左节点
                 while (cur.left != null) {
                     cur = cur.left;
                 }
+                //左子树挂上去
                 cur.left = root.left;
+                //右子树成为根节点
                 root = root.right;
                 return root;
             }

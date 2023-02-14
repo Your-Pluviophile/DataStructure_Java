@@ -17,7 +17,7 @@ public class Num538_convertBST {
         process(root.right);
 
         sum += root.val;
-        root.val = sum;
+        root.val =  sum;
 
         process(root.left);
     }

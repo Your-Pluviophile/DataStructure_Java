@@ -12,7 +12,7 @@ public class Num538_convertBST {
     }
 
     private void process(TreeNode root) {
-        if(root == null) return;
+        if(root ==  null) return;
 
         process(root.right);
 

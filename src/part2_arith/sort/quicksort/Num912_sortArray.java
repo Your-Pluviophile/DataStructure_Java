@@ -11,7 +11,40 @@ import java.util.Random;
  * @since 2023-02-16
  */
 public class Num912_sortArray {
-    public int[] sortArray(int[] nums) {
+    public int[] sortArray_heapSort(int[] nums) {
+        //1.从最后一个非叶子结点开始堆化
+        for (int i = (nums.length - 1 - 1) >> 1; i >= 0  ; i--) {
+            heapify(nums,i,nums.length);
+        }
+        // 2.不断交换堆顶元素和数组的最后一个位置，将最大值移到数组末尾
+        for (int i = nums.length - 1; i > 0; i--) {
+            // 交换
+            swap(nums,0,i);
+            // 堆化
+            heapify(nums,0,i);
+        }
+        return nums;
+    }
+
+    private void heapify(int[] nums, int k, int length) {
+        //如果还存在子树
+        while(2 * k + 1 < length){
+            //保存左右子树的最大值
+            int j = 2 * k + 1;
+            if(j + 1 < length && nums[j] < nums[j + 1]){
+                j = j + 1;
+            }
+
+            if(nums[k] >= nums[j]){
+                return;
+            }else{
+                swap(nums,k,j);
+                k = j;
+            }
+        }
+    }
+
+    public int[] sortArray_quickSort(int[] nums) {
         int l = 0;
         int r = nums.length - 1;
         quickSort(nums,l,r);

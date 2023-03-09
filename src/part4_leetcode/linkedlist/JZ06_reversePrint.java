@@ -10,7 +10,7 @@ public class JZ06_reversePrint {
         ListNode node = head;
         while(node != null){
             count++;
-            node = node.next;
+            node =  node.next;
         }
         int[] res = new int[count];
         node = head;

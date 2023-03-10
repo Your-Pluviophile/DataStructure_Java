@@ -9,7 +9,7 @@ public class Num416_canPartition {
             sum +=  num;
         }
 
-        if(sum % 2 != 0) return false;
+        if(sum % 2 != 0) return  false;
 
         int target = sum / 2;
         int[] dp = new int[target + 1];
